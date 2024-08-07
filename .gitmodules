@@ -1,0 +1,3 @@
+[submodule "extern/revealjs"]
+	path = extern/revealjs
+	url = git@github.com:hakimel/reveal.js
