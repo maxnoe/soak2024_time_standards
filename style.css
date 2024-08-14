@@ -1,0 +1,42 @@
+:root {
+  font-size: 24px;
+  --r-main-font: "Fira Sans";
+  --r-heading-font: "Fira Sans";
+  --r-code-font: "Fira Code";
+  --r-main-font-size: 1rem;
+  --r-heading1-text-shadow: "";
+  --r-heading1-size: 2.5rem;
+  --r-heading2-size: 2.0rem;
+  --r-heading3-size: 1.5rem;
+  --r-heading4-size: 1.2rem;
+
+}
+
+.reveal pre {
+  font-size: 1rem;
+}
+
+.cols {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+}
+
+img {
+  object-fit: contain;
+}
+
+img > .col {
+  width: 100%;
+}
+
+.katex {
+  font-family: Fira Math !important;
+}
+
+li~li   {
+  margin-top: 1rem;
+}
+
