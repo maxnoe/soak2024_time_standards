@@ -4,6 +4,7 @@
   --r-heading-font: "Fira Sans";
   --r-code-font: "Fira Code";
   --r-main-font-size: 1rem;
+  --r-heading-text-transform: "";
   --r-heading1-text-shadow: "";
   --r-heading1-size: 2.5rem;
   --r-heading2-size: 2.0rem;
@@ -16,7 +17,12 @@
   font-size: 1rem;
 }
 
+.vfull {
+  height: 100%;
+}
+
 .cols {
+  max-height: 100%;
   display: flex;
 }
 
@@ -40,3 +46,14 @@ li~li   {
   margin-top: 1rem;
 }
 
+
+.reveal table.padded td {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+li.follows::marker  {
+  content: "⇒"
+}
+
+td pre {margin: 0pt !important;}

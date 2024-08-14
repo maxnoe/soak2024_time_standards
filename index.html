@@ -18,54 +18,54 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1>All I wish for Christmas<br> is a negative Leap Second</h1>
-          <h2>Time Standards.</h2>
+          <h1>All I want for Christmas<br> is a negative Leap Second</h1>
+          <h2>Zeit-Standards</h2>
           <div class="author">Maximilian Linhoff</div>
           <div class="date">PeP et al. Sommerakademie 2024</div>
         </section>
 
-        <section data-transition="slide-in none-out">
+        <section class="vfull" data-transition="slide-in none-out">
           <h3>Die zwei Arten, Zeit zu definieren</h3>
           <div class="cols">
             <div class="col">
-              <img src="./images/sundial.jpg" alt="" style="height: 50vh" />
+              <img src="./images/sundial.jpg" alt="" style="max-height: 60%" />
               <p> Älteste bekannte Sonnenuhr <br>
               Ägypten, ca. 1500 v.d.Z.
             </div>
             <div class="col">
-              <img src="./images/waterclock.jpg" alt="" style="height: 50vh" />
+              <img src="./images/waterclock.jpg" alt="" style="height: 60%" />
               <p>Griechische Wasseruhr (clepsydra) <br>
               ca. 400 v.d.Z.
             </div>
           </div>
         </section>
 
-        <section data-transition="none">
+        <section class="vfull" data-transition="none">
           <h3>Die zwei Arten, Zeit zu definieren</h3>
           <div class="cols">
             <div class="col">
-              <img src="./images/quadrant.jpg" alt="" style="height: 50vh" />
+              <img src="./images/quadrant.jpg" alt="" style="height: 60%" />
               <p>Quadrant, Royal Observatory, Greenwhich<br>
                 John Bird, 1750
             </div>
             <div class="col">
-              <img src="./images/harrison_h4.jpg" alt="" style="height: 50vh" />
+              <img src="./images/harrison_h4.jpg" alt="" style="height: 60%" />
               <p>H4 Marine Chronometer<br>
               John Harrison, 1761
             </div>
           </div>
         </section>
 
-        <section data-transition="none">
+        <section class="vfull" data-transition="none">
           <h3>Die zwei Arten, Zeit zu definieren</h3>
-          <div class="cols">
+          <div class="cols vfull">
             <div class="col">
-              <img src="./images/vlba_st_croyx.jpg" alt="" style="height: 50vh" />
+              <img src="./images/vlba_st_croyx.jpg" alt="" style="height: 60%" />
               <p>Very Long Baseline Array<br>
                 St. Croix, U.S. Virgin Islands, 1986
             </div>
             <div class="col">
-              <img src="./images/first_caesium_clock.jpg" alt="" style="height: 50vh" />
+              <img src="./images/first_caesium_clock.jpg" alt="" style="height: 60%" />
               <p>Caesium-133 Atomuhr, NPL <br>
               Jack Perry & Louis Essen, 1955
             </div>
@@ -76,17 +76,20 @@
           <h3>Die zwei Arten, Zeit zu definieren</h3>
           <div class="cols">
             <div class="col">
-              <h4>Orientierung der Erde relativ zur Sonne</h4>
+              <h4>Erdrotation</h4>
               <ul>
                 <li>Älteste Methode</li>
                 <li>Einzige präzise Methode bis ca. 1760</li>
                 <li>Entdeckung der Irregularität der Tageslänge erst 1934</li>
+                <li>Langzeit und kurzzeit Trends</li>
               </ul>
             </div>
             <div class="col">
               <h4>Zählen von festen Zeitintervallen</h4>
               <ul>
-                <li>Erfordert präzise</li>
+                <li>Erfordert präzise Uhren</li>
+                <li>Quarzuhren erstmals präziser als mittlerer Sonnentag ca. 1940er</li>
+                <li>Heute: Caesium-Atomuhren</li>
               </ul>
             </div>
           </div>
@@ -128,101 +131,12 @@
             <li>Tickt in festen Zeitintervallen, z.B. der SI-Sekunde</li>
             <li>Kontinuierlich, monoton</li>
           </ol>
-          <p style="font-size: 2rem; font-weight: bold;" class="fragment">Wähle 2</p>
         </section>
 
-        <section>
-          <h3>Temps Atomique International (TAI)</h3>
-          <ul>
-            <li>Internationale Atomzeit</li>
-            <li>Aktuell berechnet als gewichteter Mittelwert von 450 Atomuhren in 80 Instituten</li>
-            <li>Kontinuierliche Zeitskala</li>
-            <li>Tickt SI-Sekunden</li>
-            <li>Synchronisiert mit UT1 (Erdrotation) in 1958, seitdem auseinander gedriftet</li>
-            <li>Seit 1977: ART Korrekturen für Unterschiede durch Höhe über NN der Uhren</li>
-          </ul>
-
-          <p style="font-size: 2rem; font-weight: bold;" class="fragment">2 + 3</p>
-        </section>
 
         <section>
-          <h3>Deutscher Beitrag: PTB Braunschweig</h3>
-          <div class="cols">
-            <div class="col">
-              <ul>
-                <li>ART Korrektur:  $8{,}6 \cdot 10^{-15}\, \mathrm{s}$ (76 m NHN)</li>
-              </ul>
-            </div>
-            <div class="col">
-              <iframe src="https://uhr.ptb.de/" width="400" height="400"></iframe>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h3>Universal Coordinated Time (UTC)</h3>
-          <ul>
-            <li>Tickt SI-Sekunden, gemessen mit den TAI Atomuhren.</li>
-            <li>Schaltsekunden garantieren einen maximalen Unterschied zu UT1 von von 0,9 Sekunden
-            <li>Rechtlicher Zeitstandard für die zivile Zeit in allen Ländern</li>
-            <li>Zeitzonen definiert also Unterschied zu UTC</li>
-          </ul>
-
-          <p style="font-size: 2rem; font-weight: bold;" class="fragment">1 + 2</p>
-        </section>
-
-        <section>
-          <h3>Zeitzonen</h3>
-          <img src="images/timezones.svg" alt="Timezones">
-        </section>
-
-        <section>
-          <section>
-            <h3>UTC Schaltsekunden</h3>
-            <pre style="font-size: 0.5rem; overflow-y: scroll;">
-      INTERNATIONAL EARTH ROTATION AND REFERENCE SYSTEMS SERVICE (IERS) 
-
-  SERVICE INTERNATIONAL DE LA ROTATION TERRESTRE ET DES SYSTEMES DE REFERENCE
-
-
-  SERVICE DE LA ROTATION TERRESTRE DE L'IERS
-  OBSERVATOIRE DE PARIS
-  61, Av. de l'Observatoire 75014 PARIS (France)
-  Tel.      : +33 1 40 51 23 35
-  e-mail    : services.iers@obspm.fr
-  http://hpiers.obspm.fr/eop-pc
-  
-  
-                                                Paris, 04 July 2024
-  
-  
-                                                Bulletin C 68
-  
-                                                To authorities responsible
-                                                for the measurement and
-                                                distribution of time
-  
-  
-                            INFORMATION ON UTC - TAI
-  
-  
-  NO leap second will be introduced at the end of December 2024.
-  The difference between Coordinated Universal Time UTC and the
-  International Atomic Time TAI is :
-  
-      from 2017 January 1, 0h UTC, until further notice : UTC-TAI = -37 s
-  
-  Leap seconds can be introduced in UTC at the end of the months of December
-  or June,  depending on the evolution of UT1-TAI. Bulletin C is mailed every
-  six months, either to announce a time step in UTC, or to confirm that there
-  will be no time step at the next possible date.
-  
-                                              Christian BIZOUARD
-                                              Director
-                                              Earth Orientation Center of IERS
-                                              Observatoire de Paris, France
-            </pre>
-          </section>
+          <h3>Die wichtigsten aktuellen Zeitstandards</h3>
+          <img src="./build/standards_venn.svg" alt="">
         </section>
 
         <section>
@@ -238,10 +152,111 @@
 
             <li>Mittelpunkt der Sonne schwer zu präzise genug zu bestimmen</li>
             <li>Geht nur Tagsüber</li>
-            <li>⇒ Positions-Messung von Quasaren mittels VLBI Radioteleskopen </li>
-            <li>Veröffenlicht als Unterschied zu UTC vom International Earth Rotation and Reference Systems Service (IERS)</li>
+            <li class="follows"> Positions-Messung von Quasaren mittels VLBI Radioteleskopen </li>
+            <li>Verantwortlich: Earth Rotation and Reference Systems Service (IERS)</li>
+            <li>IERS veröffenlicht wöchentlich Unterschied $\operatorname{UT1} - \operatorname{UTC}$</li>
           </ul>
-          <p style="font-size: 2rem; font-weight: bold;" class="fragment">1 + 3</p>
+        </section>
+
+        <section>
+          <h3>Temps Atomique International (TAI)</h3>
+          <ul>
+            <li>Internationale Atomzeit</li>
+            <li>Kontinuierliche Zeitskala, tickt SI-Sekunden</li>
+            <li>Verantwortlich: Bureau International de Poid et Mesure (BiPM)</li>
+            <li>Aktuell berechnet als gewichteter Mittelwert von 642 Atomuhren in 80 Instituten</li>
+            <li>Synchronisiert mit UT1 (Erdrotation) in 1958, seitdem auseinander gedriftet</li>
+            <li>Seit 1977: ART Korrekturen für Unterschiede durch Höhe über NN der Uhren</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Deutscher Beitrag</h3>
+          <div class="cols">
+            <div class="col">
+              <ul>
+                <li>Physikalisch Technische Bundesanstalt (PTB)</li>
+                <li>Ist in Deutschland gesetzlich verantwortlich für alle metrologischen Belange</li>
+                <li>Steuert Messungen von 4 Atomuhren zu TAI bei</li>
+              </ul>
+            </div>
+            <div class="col">
+              <iframe src="https://uhr.ptb.de/" width="400" height="400"></iframe>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Atomuhren der PTB Braunschweig</h3>
+          <div class="cols">
+            <img src="./images/ptb_clocks.jpg" alt="">
+          </div>
+        </section>
+
+        <section>
+          <h3>Universal Coordinated Time (UTC)</h3>
+          <ul>
+            <li>Tickt SI-Sekunden, gemessen mit den TAI Atomuhren</li>
+            <li>Schaltsekunden garantieren einen maximalen Unterschied zu UT1 von von 0,9 Sekunden</li>
+            <li>Rechtlicher Zeitstandard für die zivile Zeit in allen Ländern</li>
+            <li>Zeitzonen definiert also Unterschied zu UTC</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Zeitzonen</h3>
+          <img src="images/timezones.svg" alt="Timezones">
+        </section>
+
+        <section>
+          <section class="vfull">
+            <h3>UTC Schaltsekunden</h3>
+            <pre style="font-size: 0.5rem; overflow-y: scroll; height: 80%">
+     INTERNATIONAL EARTH ROTATION AND REFERENCE SYSTEMS SERVICE (IERS) 
+
+SERVICE INTERNATIONAL DE LA ROTATION TERRESTRE ET DES SYSTEMES DE REFERENCE
+
+
+SERVICE DE LA ROTATION TERRESTRE DE L'IERS
+OBSERVATOIRE DE PARIS
+61, Av. de l'Observatoire 75014 PARIS (France)
+Tel.      : +33 1 40 51 23 35
+e-mail    : services.iers@obspm.fr
+http://hpiers.obspm.fr/eop-pc
+ 
+ 
+                                              Paris, 04 July 2024
+ 
+ 
+                                              Bulletin C 68
+ 
+                                              To authorities responsible
+                                              for the measurement and
+                                              distribution of time
+ 
+ 
+ 
+                          INFORMATION ON UTC - TAI
+ 
+ 
+ NO leap second will be introduced at the end of December 2024.
+ The difference between Coordinated Universal Time UTC and the
+ International Atomic Time TAI is :
+ 
+     from 2017 January 1, 0h UTC, until further notice : UTC-TAI = -37 s
+ 
+ Leap seconds can be introduced in UTC at the end of the months of December
+ or June,  depending on the evolution of UT1-TAI. Bulletin C is mailed every
+ six months, either to announce a time step in UTC, or to confirm that there
+ will be no time step at the next possible date.
+ 
+ 
+                                            Christian BIZOUARD
+                                            Director
+                                            Earth Orientation Center of IERS
+                                            Observatoire de Paris, France
+            </pre>
+          </section>
         </section>
 
         <section>
@@ -249,28 +264,68 @@
           <img src="./build/dut1.svg" alt="">
         </section>
 
+        <section>
+          <h3>Exkurs: übliche Zeitformate</h3>
+          <table>
+            <tr>
+              <td>ISO8601</td>
+              <td>UTC</td>
+              <td><pre id="current-iso-utc"></pre></td>
+            </tr>
+            <tr>
+              <td>ISO8601</td>
+              <td>Lokalzeit, mit UTC Offset</td>
+              <td><pre id="current-iso-local"></pre></td>
+            </tr>
+            <tr>
+              <td>Unix</td>
+              <td>Sekunden seit 1970-01-01 00:00:00 UTC<br>aber ohne Schaltsekunden</td>
+              <td><pre id="current-unix"></pre></td>
+            </tr>
+            <tr>
+              <td>Julian Day (JD)</td>
+              <td>Tage seit 24.11.4714 v.d.Z, 12:00 Uhr
+              <td><pre id="current-jd"></pre></td>
+            </tr>
+            <tr>
+              <td>Modified Julian Day (MJD)</td>
+              <td>Tage seit 17.11.1858, 00:00 Uhr
+              <td><pre id="current-mjd"></pre></td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+          <h3>ISO8601</h3>
+          <div class="cols">
+            <div class="col">
+              <img src="./images/xkcd_iso.png" height="500" alt="">
+            </div>
+            <div class="col">
+              <ul>
+                <li>Internationaler Standard für Datums- und Zeitformate</li>
+                <li>Definiert viele Varianten</li>
+                <li>Datum: YYYY-MM-DD</li>
+                <li>Zeit: HH:MM:SS</li>
+                <li>Zeitzone als UTC offset: +/-HH:MM</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <iframe width="1066" height="600" src="https://www.youtube.com/embed/U2WlQZf9zSg?si=rX5GYa-ItXSvYtF5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
       </div>
     </div>
 
 
+    <script src="extern/moment.min.js"></script>
+    <script src="extern/moment-timezone-with-data.js"></script>
     <script src="extern/revealjs/dist/reveal.js"></script>
     <script src="extern/revealjs/plugin/highlight/highlight.js"></script>
     <script src="extern/revealjs/plugin/math/math.js"></script>
     <script src="extern/revealjs/plugin/zoom/zoom.js"></script>
-
-    <script>
-      Reveal.initialize({
-        hash: true,
-        slideNumber: true,
-        plugins: [
-          RevealHighlight,
-          RevealMath.KaTeX,
-          RevealZoom,
-        ],
-        width: 960,
-        height: 600,
-        zoomLevel: 5,
-      });
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

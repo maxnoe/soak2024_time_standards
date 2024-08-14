@@ -1,3 +1,5 @@
+images/
+build/
 # Logs
 logs
 *.log
