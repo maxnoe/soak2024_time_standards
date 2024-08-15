@@ -58,8 +58,6 @@ images/timezones.svg: | images
 build/%.svg: plots/plot_%.py | build 
 	python $<
 
-
-
 images:
 	mkdir -p $@
 
