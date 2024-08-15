@@ -49,7 +49,7 @@
                 John Bird, 1750
             </div>
             <div class="col">
-              <img src="./images/harrison_h4.jpg" alt="" style="height: 60%" />
+              <img src="./images/harrison_h4.png" alt="" style="height: 60%" />
               <p>H4 Marine Chronometer<br>
               John Harrison, 1761
             </div>
@@ -147,7 +147,7 @@
 
               $$\operatorname{ERA} = 2π(0.7790572732640 + 1.00273781191135448 · T_u) \operatorname{radians}$$
               mit
-              $T_u = \text{Julianisches UT1 Datum} - 2451545.0$, Tage seit 2000-01-01T12:00:00 UT1
+              $T_u = $ Tage seit <code>2000-01-01 12:00:00 UT1</code>
             </li>
 
             <li>Mittelpunkt der Sonne schwer zu präzise genug zu bestimmen</li>
@@ -196,16 +196,35 @@
         <section>
           <h3>Universal Coordinated Time (UTC)</h3>
           <ul>
+            <li>Offizielle Nutzung seit 1963</li>
+            <li>Aktuelle Definition seit 1972</li>
             <li>Tickt SI-Sekunden, gemessen mit den TAI Atomuhren</li>
-            <li>Schaltsekunden garantieren einen maximalen Unterschied zu UT1 von von 0,9 Sekunden</li>
-            <li>Rechtlicher Zeitstandard für die zivile Zeit in allen Ländern</li>
+            <li>Schaltsekunden garantieren  $|\operatorname{UT1} - \operatorname{UTC}| < 0{,}9\,\text{s}$</li>
+            <li>Rechtlicher Zeitstandard für die zivile Zeit in quasi allen Ländern</li>
             <li>Zeitzonen definiert also Unterschied zu UTC</li>
+            <li>Zeitzonen von Ländern können sich sehr kurzfristig ändern</li>
           </ul>
         </section>
 
         <section>
           <h3>Zeitzonen</h3>
           <img src="images/timezones.svg" alt="Timezones">
+        </section>
+
+        <section>
+          <h3>Angleichung von UTC an UT1</h3>
+          <h4>Vor 1972</h4>
+          <ul>
+            <li>Anpassung der Sekundenlänge jedes Jahr</li>
+            <li>Sprünge von 0,1&thinsp;s oder 0,2&thinsp;s</li>
+          </ul>
+
+          <h4 style="margin-top: 1rem">Ab 1972</h4>
+          <ul>
+            <li>Einmaliger Sprung, sodass $|\operatorname{TAI} - \operatorname{UTC}| = 10\,\text{s}$</li>
+            <li>Schaltsekunde wenn $|\operatorname{UT1} - \operatorname{UTC}| > 0.6\,\text{s}$</li>
+            <li>Seitdem 27 <em>positive</em> Schaltsekunden ⇒ aktuell $|\operatorname{TAI} - \operatorname{UTC}| = 37\,\text{s}$</li>
+          </ul>
         </section>
 
         <section>
@@ -265,6 +284,23 @@ http://hpiers.obspm.fr/eop-pc
         </section>
 
         <section>
+          <h3>Die negative Schaltsekunde</h3>
+          <ul>
+            <li>Langzeittrend: Erdrotation wird langsamer durch Gezeitenreibung mit dem Mond</li>
+            <li>Aktuell: Flüssiger Erdkern rotiert langsamer ⇒ Mantel rotiert schneller</li>
+            <li>Vorhersage: Negative Schaltsekunde nötig spätestens 2029</li>
+            <li>Wäre schon eher notwending, wenn die Eiskappen nicht abschmelzen würden</li>
+          </ul>
+
+          <blockquote cite="https://www.nature.com/articles/s41586-024-07170-0" style="width: 90%; text-align: left;">
+            Agnew, Duncan: “A global timekeeping problem postponed by global warming”<br>
+            Nature, 628, 333–336, 2024
+          </blockquote>
+
+          <p> ⇒ Der Klimawandel hat Einfluss auf unsere Zeitmessung</p>
+        </section>
+
+        <section>
           <h3>Exkurs: übliche Zeitformate</h3>
           <table>
             <tr>
@@ -279,7 +315,7 @@ http://hpiers.obspm.fr/eop-pc
             </tr>
             <tr>
               <td>Unix</td>
-              <td>Sekunden seit 1970-01-01 00:00:00 UTC<br>aber ohne Schaltsekunden</td>
+              <td>Sekunden seit <pre>1970-01-01 00:00:00Z</pre><em>ohne Schaltsekunden</em></td>
               <td><pre id="current-unix"></pre></td>
             </tr>
             <tr>
@@ -299,7 +335,8 @@ http://hpiers.obspm.fr/eop-pc
           <h3>ISO8601</h3>
           <div class="cols">
             <div class="col">
-              <img src="./images/xkcd_iso.png" height="500" alt="">
+              <img src="images/xkcd_iso.png" alt="" height="400px">
+              <div >© Randall Munroe, XKCD</div>
             </div>
             <div class="col">
               <ul>
@@ -314,11 +351,50 @@ http://hpiers.obspm.fr/eop-pc
         </section>
 
         <section>
+          <h3>Unix-Zeitstempel</h3>
+          <ul>
+            <li>Anzahl der Nicht-Schaltsekunden seit der Unix-Epoche:<br><pre>1970-01-01T00:00:00Z</pre></li>
+            <li>Wird als Integer gespeichert, mit Vorzeichen.</li>
+            <li>Lange mit 32 Bits, 2038-Problem: <pre id="unix-overflow"></pre></li>
+            <li>Differenz von Unix-Zeitstempeln ist nicht die vergangene Zeit 🤯 </li>
+            <li>Problematisch für Zeiten vor 1972</li>
+            <li>Es ist nicht standardisiert, wie sich die Unixzeit bei Schaltsekunden verhält</li>
+          </ul>
+        </section>
+
+        <section class="vfull">
+          <div class="vfull">
+            <img src="images/xkcd_time_interval.png" alt="">
+            <div style="position: absolute; bottom: 0.5rem; left: 0.5rem;">© Randall Munroe, XKCD</div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Also einfach abschaffen den Quatsch?</h3>
+          <ul>
+            <li>In 2022, hat die „General Conference of Weights and Measures“ (CGPM) beschlossen:</li>
+            <blockquote cite="">
+              “that the maximum value for the difference (UT1-UTC) will be increased in, or before, 2035”
+            </blockquote>
+            <li>Praktisch die Abschaffung der Schaltsekunde, kein Eingriff mehr in UTC in diesem Jahrhundert</li>
+            <li>Also Ende gut, alles Gut?</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Kurze Abstimmung: Was haltet ihr für wahrscheinlicher?</h3>
+          <ol>
+            <li>Programmierer implementieren etwas, was ca. alle 1–3 Jahre passiert korrekt</li>
+            <li>Programmierer implementieren etwas, was ca. einmal pro Jahrhundert passiert korrekt</li>
+          </ol>
+
+        </section>
+
+        <section>
           <iframe width="1066" height="600" src="https://www.youtube.com/embed/U2WlQZf9zSg?si=rX5GYa-ItXSvYtF5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
       </div>
     </div>
-
 
     <script src="extern/moment.min.js"></script>
     <script src="extern/moment-timezone-with-data.js"></script>

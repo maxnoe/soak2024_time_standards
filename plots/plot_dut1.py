@@ -86,8 +86,8 @@ ax.xaxis.set_minor_locator(YearLocator())
 ax.annotate("2016-12-31T23:59:60", (x[idx+1], y[idx+1]), xytext=(-5, 0), textcoords='offset points', ha='right', va='center', color='C1' )
 ax.set(
     xlim=(0.95 * x.min(), 1.05 * x.max()),
-    ylim=(1.05 * y.min(), 1.05 * y.max()),
+    ylim=(-1, 1),
     ylabel="(UT1 – UTC) / s",
 )
 
-fig.savefig("build/dut1.svg")
+fig.savefig("build/dut1.svg", transparent=True)
