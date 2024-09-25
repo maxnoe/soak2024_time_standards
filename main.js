@@ -21,6 +21,7 @@ function overflow() {
 Reveal.initialize({
   hash: true,
   slideNumber: true,
+  controls: false,
   plugins: [
     RevealHighlight,
     RevealMath.KaTeX,
